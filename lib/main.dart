@@ -24,11 +24,37 @@ class DashBoardScreen extends StatelessWidget{
        appBar: AppBar(
          title: Text("Decoration to Container"),
        ),
-       body:Container(
-         width: double.infinity,
-         height: double.infinity,
-         color: Colors.blue.shade50,
-
+       body:Column(
+         children: [
+           Expanded(
+             flex: 2,
+             child: Container(
+               height:100,
+               color: Colors.blue
+             ),
+           ),
+           Expanded(
+             flex: 4,
+             child: Container(
+               height:100,
+               color: Colors.orange
+             ),
+           ),
+           Expanded(
+             flex: 2,
+             child: Container(
+               height:100,
+               color: Colors.blueGrey
+             ),
+           ),
+           Expanded(
+             flex: 3,
+             child: Container(
+               height:100,
+               color: Colors.green
+             ),
+           ),
+         ],
        ) ,
      );
    }
