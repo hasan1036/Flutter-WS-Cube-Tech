@@ -16,47 +16,28 @@ class MyApp extends StatelessWidget{
     );
   }
 }
-class DashBoardScreen extends StatelessWidget{
+class DashBoardScreen extends StatelessWidget {
 
-   @override
-  Widget build(BuildContext context){
-     return Scaffold(
-       appBar: AppBar(
-         title: Text("Decoration to Container"),
-       ),
-       body:Column(
-         children: [
-           Expanded(
-             flex: 2,
-             child: Container(
-               height:100,
-               color: Colors.blue
-             ),
-           ),
-           Expanded(
-             flex: 4,
-             child: Container(
-               height:100,
-               color: Colors.orange
-             ),
-           ),
-           Expanded(
-             flex: 2,
-             child: Container(
-               height:100,
-               color: Colors.blueGrey
-             ),
-           ),
-           Expanded(
-             flex: 3,
-             child: Container(
-               height:100,
-               color: Colors.green
-             ),
-           ),
-         ],
-       ) ,
-     );
-   }
-
+  @override
+  Widget build(BuildContext context) {
+    var arrNames = ['Hasan', 'Jannat', 'Tanvir', 'Rohani', 'Nahar', 'Naima'];
+    return Scaffold(
+        appBar: AppBar(
+          title: Center(child: Text("CircleAvatar")),
+        ),
+        body: Center(
+          child: CircleAvatar(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text('Name', style: TextStyle(color: Colors.black, fontSize: 25,),),
+              ],
+            ),
+            backgroundImage: AssetImage('assets/images/boy.png'),
+            backgroundColor: Colors.transparent,
+            radius: 100,
+          ),
+        ),
+    );
+  }
 }
